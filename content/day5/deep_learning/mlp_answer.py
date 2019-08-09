@@ -32,7 +32,7 @@ class Normalizer:
         """normalizes an sample x to have 0 mean and unit standard deviation"""
         if train:
             self.mean = np.mean(X)
-            self.std = np.mean(X)
+            self.std = np.std(X)
 
         return((X - self.mean)/self.std)
 
